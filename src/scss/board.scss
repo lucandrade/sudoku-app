@@ -1,0 +1,80 @@
+.board {
+    width: $board-size;
+    height: $board-size;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+	flex-wrap: wrap;
+    border: $cell-highlighted-border;
+
+    @media (max-width: $board-size) { 
+        width: $board-size-mobile;
+        height: $board-size-mobile;
+    }
+
+    .board-line {
+        flex: 1;
+        display: flex;
+
+        .board-cell {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: $board-font;
+            color: $cell-color;
+            background-color: $cell-bg;
+            border-bottom: $cell-border;
+
+            &:hover:not(.disabled) {
+                cursor: pointer;
+            }
+
+            &:not(:last-child) {
+                border-right: $cell-border;
+            }
+
+            &:nth-of-type(3), &:nth-of-type(6) {
+                border-right: $cell-highlighted-border;
+            }
+
+            &.highlighted {
+                background-color: $cell-highlighted-bg;
+            }
+
+            &.selected {
+                background-color: $cell-selected-bg;
+            }
+
+            &.focused {
+                background-color: $cell-focused-bg;
+            }
+            
+            &.error {
+                color: $cell-error-color;
+            }
+
+            &:not(.disabled):not(.error) {
+                color: $cell-guess-color;
+            }
+        }
+
+        &:nth-of-type(3), &:nth-of-type(6) {
+            .board-cell {
+                border-bottom: $cell-highlighted-border;
+            }
+        }
+
+        &:nth-of-type(4), &:nth-of-type(7) {
+            .board-cell {
+                border-top: none;
+            }
+        }
+
+        &:nth-of-type(9) {
+            .board-cell {
+                border-bottom: none;
+            }
+        }
+    }
+}

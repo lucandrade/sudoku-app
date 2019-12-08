@@ -1,0 +1,89 @@
+.panel-buttons {
+    display: flex;
+    width: $board-size;
+    margin: 20px auto 0;
+    background-color: $panel-buttons-bg;
+    font: $board-font;
+
+    @media (max-width: $board-size) { 
+        width: $board-size-mobile;
+    }
+
+    .panel-button {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: $buttons-border;
+        border-right: $buttons-border;
+        color: $buttons-color;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $buttons-highlighted-bg;
+            color: $buttons-highlighted-color;
+        }
+
+        span {
+            // font: $board-font;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    .panel-numbers {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        border: $buttons-highlighted-border;
+        
+        .numbers {
+            align-self: stretch;
+            display: flex;
+            
+            &:last-child {
+                .number {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    .panel-help {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border: $buttons-highlighted-border;
+        border-left: none;
+
+        .panel-row {
+            flex: 1;
+            display: flex;
+
+            &:last-child {
+                border-top: $buttons-border;
+            }
+
+            .panel-button {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+
+                &+.panel-button {
+                    border-left: $buttons-border;
+                }
+
+                &.button-new-game {
+                    color: $buttons-new-game-color;
+                    background-color: $number-bg;
+                    border-top-color: $number-bg;
+                }
+            }
+        }
+    }
+}

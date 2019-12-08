@@ -1,0 +1,36 @@
+$bg-color: white;
+$bg-color-gray: #d8d8d8;
+$btn-color: #3d3d3d;
+$btn-bg-color: white;
+$font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+$font-size: 1em;
+$font-weight: 400;
+$font: $font-weight $font-size $font-family;
+
+$menu-bg: rgb(1, 49, 194);
+
+$board-size: 500px;
+$board-size-mobile: 90%;
+$board-font: $font-weight * .75 $font-size * 2.3 $font-family;
+
+$cell-color: black;
+$cell-border: solid 1px #bec6d4;
+$cell-bg: white;
+$cell-highlighted-bg: #f5f5f5;
+$cell-highlighted-border: solid 2px black;
+$cell-guess-color: #0077f4;
+$cell-focused-bg: #d0e7ff;
+$cell-selected-bg: darken($cell-highlighted-bg, 10%);
+$cell-error-color: #ff4c4c;
+
+$panel-buttons-bg: white;
+
+$buttons-color: $cell-color;
+$buttons-bg: $cell-bg;
+$buttons-border: $cell-border;
+$buttons-highlighted-border: $cell-highlighted-border;
+$buttons-highlighted-color: $cell-guess-color;
+$buttons-highlighted-bg: $cell-focused-bg;
+$buttons-new-game-color: $buttons-bg;
+$number-bg: rgb(40, 145, 255);
+

@@ -1,0 +1,91 @@
+.options {
+    width: $board-size;
+    margin: 0 auto;
+
+    @media (max-width: $board-size) { 
+        width: $board-size-mobile;
+    }
+
+    .buttons {
+        margin: 20px auto 10px;
+        display: flex;
+
+        .button-option {
+            flex: 1;
+            text-align: left;
+            position: relative;
+
+            .menu-options {
+                position: absolute;
+                list-style: none;
+                padding: 10px;
+                margin: 0;
+                background-color: $menu-bg;
+                color: $btn-bg-color;
+                border-radius: 5px;
+                margin-top: 15px;
+                transition: .2s ease-in all;
+                opacity: 0;
+                pointer-events: none;
+
+                &.active {
+                    opacity: 1;
+                    pointer-events: inherit;
+                }
+
+                &:before {
+                    content:"";
+                    position: absolute;
+                    left: 11px;
+                    top: -8px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 8px 8px 8px;
+                    border-color: transparent transparent $menu-bg transparent;
+                    z-index:9999;
+                }
+
+                > li {
+                    padding: 5px;
+
+                    &:hover {
+                        cursor: pointer;
+
+                        > span {
+                            opacity: .8;
+                        }
+                    }
+
+                    > span {
+                        opacity: .6;
+                    }
+
+                    &.active {
+                        font-weight: bold;
+
+                        &::before {
+                            content: '\2713';
+                            margin-right: 5px;
+                        }
+
+                        > span {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+
+            .button {
+                &:hover {
+                    cursor: pointer;
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

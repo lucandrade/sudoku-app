@@ -1,0 +1,36 @@
+.buttons {
+    display: flex;
+
+    .button {
+        flex: 1;
+    }
+}
+
+.button {
+    background-color: $btn-bg-color;
+    outline: none;
+    border: none;
+    color: $btn-color;
+
+    &:disabled {
+        opacity: .6;
+    }
+
+    &.round {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5em;
+        border-radius: 50%;
+
+        &.big {
+            width: 80px;
+            height: 80px;
+            font-size: 2.5em;
+
+            &.play {
+                padding-left: 0.35em;
+                padding-top: 0.15em;
+            }
+        }
+    }
+}

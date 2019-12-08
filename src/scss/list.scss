@@ -1,0 +1,39 @@
+.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding: 100px 0;
+    height: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    text-align: center;
+
+    li {
+        flex: 1;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        outline: none;
+
+        div {
+            flex: 1;
+            display: inline;
+            align-self: center;
+
+            span {
+                font-size: 2em;
+                color: rgba(0, 0, 0, .7);
+            }
+        }
+
+        &.selected {
+            div {
+                span {
+                    color: $number-bg;
+                    border-bottom: 3px solid $number-bg;
+                }
+            }
+        }
+    }
+}

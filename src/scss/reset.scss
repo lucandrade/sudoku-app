@@ -1,0 +1,20 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	
+	box-sizing: border-box; 
+}
+
+html, body  { 
+	height: 100%;
+	width: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: $bg-color;
+    font: $font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.4;
+}
